@@ -1,0 +1,57 @@
+ {% form_theme form 'bootstrap_4_layout.html.twig' %}
+{{ form_start(form) }}
+  {#  {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}#}
+
+
+      <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-dark">
+              <div class="card-header">
+                <h3 class="card-title">Establecimiento </h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->            
+             
+             
+                <div class="card-body">
+     
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Código del establecimiento</label>
+                    {{form_widget(form.codigo)}}
+                   
+                  </div>
+                  
+                   <div class="form-group">
+                    <label for="exampleInputPassword1">Cantidad de trabajadores</label>
+                       {{form_widget(form.canttrab)}}
+                    
+                 <div class="form-group">
+                    <label for="exampleInputPassword1">Cantidad de productos</label>
+                    {{form_widget(form.cantprod)}}
+                   
+                  </div> 
+                    <div class="form-group">
+                    <label for="exampleInputPassword1">Nombre del  director</label>
+                    {{form_widget(form.directorid)}}                       
+                  
+                </div>
+                 <div class="form-group">
+                    <label for="exampleInputPassword1">Dirección</label>
+                    {{form_widget(form.direccionid)}}                       
+                  
+                </div>
+                <!-- /.card-body -->              
+             
+            </div>
+            </div>
+            </div>
+            </div>
+            </section>
+    <button class="btn btn btn-outline-success">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

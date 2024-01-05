@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}AdminLTE 3 | Blank Page{% endblock %}</title>
+  <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}" />
+
+     {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+           
+              
+      
+        {% endblock %}
+    {% block head %}  {% include('inicio/head.html.twig')  %}      {%  endblock %}
+</head>
+<body class="hold-transition sidebar-mini" >
+
+
+
+{% block header %}   {% include('inicio/header.html.twig')      %}   {% endblock %}
+{% block body %}                                                     {% endblock %}
+{% block sidebar %}  {% include('inicio/sidebar.html.twig ')   %}   {% endblock %}
+
+{% block footer %}   {% include('inicio/footer.html.twig ')   %}    {% endblock %}
+
+
+</body>
+</html>

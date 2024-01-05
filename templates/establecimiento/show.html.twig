@@ -1,0 +1,105 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Establecimiento{% endblock %}
+
+{% block body %}
+
+
+ <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    {#<h1>Blank Page</h1>#}
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="{{ path('app_inicio') }}" >Home</a></li>
+                        <li class="breadcrumb-item active">Blank Page</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Show de Tabla Establecimiento</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+    
+ 
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ establecimiento.id }}</td>
+            </tr>
+            <tr>
+                <th>Código</th>
+                <td>{{ establecimiento.codigo }}</td>
+            </tr>
+            <tr>
+                <th>Cantidad de trabajadores</th>
+                <td>{{ establecimiento.canttrab }}</td>
+            </tr>
+            <tr>
+                <th>Cantidad de productos</th>
+                <td>{{ establecimiento.cantprod }}</td>
+            </tr>
+
+             
+        </tbody>
+    </table>
+
+   </br>
+         
+            
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group mr-2" role="group" aria-label="First group">
+
+    <a href="{{ path('app_establecimiento_index') }}"class="btn btn-sm btn-primary">back to list</a>
+
+  </div>
+  <div class="btn-group mr-2" role="group" aria-label="Second group">
+    
+     <a href="{{ path('app_establecimiento_edit', {'id': establecimiento.id}) }}" class="btn btn-sm btn-warning">edit</a>
+  </div>
+  <div class="btn-group" role="group" aria-label="Third group">
+   
+
+    {{ include('establecimiento/_delete_form.html.twig') }}
+  </div>
+</div>
+   </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+               
+
+
+            </div>
+            <!-- /.card-footer-->
+        </div>
+        <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+</div>
+    <!-- /.content-wrapper -->
+{% endblock %}

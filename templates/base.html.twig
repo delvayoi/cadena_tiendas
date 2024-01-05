@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta  charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+         <title>{% block title %}Welcome!{% endblock %}</title>
+             <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}" />
+                  {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+
+              {#   <link type="text/css" rel="stylesheet" href="{{ asset('css/estilos.css ') }}  "/>  #}
+                <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap.css') }} "/>
+                <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}  "/>
+                 <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap-reboot.css') }}   "/>
+                 <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap-reboot.min.css') }}  "/>
+
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+                <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"> </script>
+                <script type="text/javascript" src="{{ asset('js/principal.js') }}"> </script>
+                <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"> </script>
+        {% endblock %}
+    </head>
+    
+    <body>
+      
+             {% block header %}    {% include('header.html.twig') %}  {% endblock %} 
+             
+
+                 {% block body %} {% endblock %}
+               
+                  {% block footer %}   {% include('footer.html.twig ')   %} {% endblock %}
+
+
+
+
+         
+            
+
+    </body>
+
+   
+
+</html>

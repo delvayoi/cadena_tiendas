@@ -1,0 +1,149 @@
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<!-- Brand Logo -->
+
+<a href="{{ path('app_inicio') }}"  class="brand-link">
+  {#  <img src="{{asset ('assets ') }}/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">#}
+    <span class="brand-text font-weight-light">Usuario </span>
+</a>
+
+<!-- Sidebar -->
+<div class="sidebar">
+<!-- Sidebar user (optional) -->
+<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="image">
+        <img src="{{asset ('assets ') }}/admin/dist/img/avatar.png" class="img-circle elevation-2" alt="User Image">
+    </div>
+    <div class="info">
+        <a class="d-block"> {{ app.user.lastname }} </a>
+ 
+    </div>
+</div>
+
+<!-- SidebarSearch Form -->
+
+{#
+<div class="form-inline">
+    <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+            <button class="btn btn-sidebar">
+                <i class="fas fa-search fa-fw"></i>
+            </button>
+        </div>
+    </div>
+</div>#}
+
+<!-- Sidebar Menu -->
+<nav class="mt-2">
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+<!-- Add icons to the links using the .nav-icon class
+     with font-awesome or any other icon font library -->
+
+<li class="nav-item" style="disabled">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
+        <p>
+            Registrar Usuarios
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+ {% for rol in  app.user.roles   %} 
+        {% if rol ==  "ROLE_ADMIN" %}
+        <li class="nav-item"   >
+            <a href="{{ path('app_register') }}"class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Nuevos Usuarios
+                    <span class="right badge badge-danger">New</span>
+                </p>
+            </a>
+        </li>
+        {% else %}
+          <li class="nav-item"  style="visibility: hidden" >
+            <a href="{{ path('app_register') }}"class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Nuevos Usuarios
+                    <span class="right badge badge-danger">New</span>
+                </p>
+            </a>
+        </li>
+        {% endif %}
+     {% endfor %}
+
+   
+
+       
+        {#
+        <li class="nav-item">
+            <a href="{{asset ('assets ') }}/admin/index2.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Listados de Usuarios</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{asset ('assets ') }}/admin/index3.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Canceled</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{asset ('assets ') }}/admin/index3.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Completed</p>
+            </a>
+        </li>#}
+    </ul>
+</li>
+    <li class="nav-item">
+        <a href="{{ path('app_sexo_index') }}"        class="nav-link">
+            <i class="nav-icon fas fa-th"></i>
+            <p>
+              Sexo
+
+            </p>
+        </a>
+    </li>
+<li class="nav-item">
+    <a href="{{ path('app_direccion_index') }}" class="nav-link">
+        <i class="nav-icon fas fa-th"></i>
+        <p>
+          Dirección
+
+        </p>
+    </a>
+</li>
+
+<li class="nav-header">General                                       </li>
+<li class="nav-item">
+    <a href="{{ path('app_director_index') }}" class="nav-link">
+        <i class="nav-icon far fa-circle text-danger"></i>
+        <p class="text">Director</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{{ path('app_establecimiento_index') }}"    
+    class="nav-link">
+        <i class="nav-icon far fa-circle text-warning"></i>
+        <p>Establecimiento</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{{ path('app_trailer_index') }}"   class="nav-link">
+        <i class="nav-icon far fa-circle text-info"></i>
+        <p>Trailer</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{{ path('app_tienda_index') }}"   class="nav-link">
+        <i class="nav-icon far fa-circle text-primary"></i>
+        <p>Tienda</p>
+    </a>
+</li>
+</ul>
+</nav>
+<!-- /.sidebar-menu -->
+</div>
+<!-- /.sidebar -->
+</aside>

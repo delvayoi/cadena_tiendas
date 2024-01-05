@@ -1,0 +1,65 @@
+
+<div class="container">
+ <h1>Sistema de Hipermercados y Supermercados</h1>
+   <ul class="nav nav-tabs">
+      <li class="nav-item">
+          <a class="nav-link " href="#">Inicio</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link " href="{{ path('app_sexo_index') }}"        >Sexo</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link " href="{{ path('app_director_index') }}"            >Director</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_direccion_index')  }}"          >Dirección</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link " href="{{ path('app_establecimiento_index') }}"      >Establecimiento</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="{{ path('app_tienda_index') }}"         >Tienda</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link   " href="{{ path('app_trailer_index')}}"   >Trailer</a>
+      </li>
+      
+       
+      <li class="nav-item">
+        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Reportes</a>
+      </li>
+
+    <li class="nav-item">
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Quienes Somos
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header  alert alert-success ">
+                  <h5 class="modal-title" id="exampleModalLabel">Integrantes:</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                        <div class="modal-body">
+                          Laís García Borrego<br>
+                          Darien Alexander Rizo Rosales<br>
+                          Ulises Cordero Rodríguez<br>
+                          Yoannys Delvá González<br>
+                        </div>
+                        <div class="modal-footer  alert alert-success  ">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                       {# <button type="button" class="btn btn-primary">Guardar cambios</button>#}
+                          </div>
+              </div>
+          </div>
+      </div>
+
+            </li>
+
+
+                </ul>
+<div>

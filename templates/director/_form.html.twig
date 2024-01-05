@@ -1,0 +1,54 @@
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{{ form_start(form) }}
+   {# {{ form_widget(form) }}#}
+  
+
+      <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-dark">
+              <div class="card-header">
+                <h3 class="card-title">Director </h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->            
+             
+             
+                <div class="card-body">
+     
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre del director</label>
+                    {{form_widget(form.nombre)}}
+                   
+                  </div>
+                  
+                   <div class="form-group">
+                    <label for="exampleInputPassword1">Años de experiencia</label>
+                       {{form_widget(form.annosexp)}}
+                    
+                 <div class="form-group">
+                    <label for="exampleInputPassword1">Sexo</label>
+                    {{form_widget(form.sexoid)}}
+                   
+                  </div> 
+                  
+               
+                <!-- /.card-body -->              
+             
+            </div>
+            </div>
+            </div>
+            </div>
+            </section>
+
+    <div class="col-sm-3" >
+            <button class="btn btn btn-outline-success">{{ button_label|default('Save') }}</button>
+   </div>
+
+
+
+{{ form_end(form) }}

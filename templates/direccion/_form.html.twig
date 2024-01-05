@@ -1,0 +1,49 @@
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{{ form_start(form) }}
+
+      <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-dark">
+              <div class="card-header">
+                <h3 class="card-title">Dirección </h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->              
+             
+                <div class="card-body">    
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Reparto</label>
+                    {{form_widget(form.reparto)}}
+                   
+                  </div>
+                  
+                   <div class="form-group">
+                    <label for="exampleInputPassword1">Calle</label>
+                       {{form_widget(form.calle)}}
+                    
+                 <div class="form-group">
+                    <label for="exampleInputPassword1">Número</label>
+                    {{form_widget(form.numero)}}
+                   
+                  </div> 
+                  
+               
+                <!-- /.card-body -->              
+             
+            </div>
+            </div>
+            </div>
+            </div>
+            </section>
+
+    <div class="col-sm-3" >
+            <button class="btn btn btn-outline-success">{{ button_label|default('Save') }}</button>
+   </div>
+
+
+{{ form_end(form) }}
+
